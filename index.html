@@ -1,0 +1,299 @@
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Share+Tech+Mono&family=Rajdhani:wght@300;400;600;700&display=swap');
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--nb:#00d4ff;--nc:#00fff7;--ng:#00ff88;--el:#0066ff;--dk:#020c1b;--dk2:#010812;--pan:rgba(0,15,40,0.88);--tx:#c8e8ff}
+body{background:var(--dk2);font-family:'Rajdhani',sans-serif;color:var(--tx);min-height:100vh;overflow-x:hidden}
+#bgc{position:fixed;top:0;left:0;width:100%;height:100%;z-index:0;pointer-events:none}
+.wrap{position:relative;z-index:1;max-width:900px;margin:0 auto;padding:16px 14px 40px}
+.badge{display:inline-block;font-family:'Share Tech Mono',monospace;font-size:10px;color:var(--ng);border:1px solid var(--ng);padding:3px 14px;letter-spacing:3px;margin-bottom:14px;position:relative;overflow:hidden;animation:pbdr 2s ease-in-out infinite}
+.badge::before{content:'';position:absolute;top:0;left:-100%;width:100%;height:100%;background:linear-gradient(90deg,transparent,rgba(0,255,136,.2),transparent);animation:scn 2s linear infinite}
+@keyframes scn{to{left:200%}}
+@keyframes pbdr{0%,100%{box-shadow:0 0 6px rgba(0,255,136,.4)}50%{box-shadow:0 0 18px rgba(0,255,136,.9)}}
+.hdr{text-align:center;padding:32px 0 12px}
+.mtit{font-family:'Orbitron',monospace;font-size:clamp(20px,4.5vw,40px);font-weight:900;line-height:1.1;letter-spacing:2px;background:linear-gradient(135deg,var(--nc),var(--el),var(--nb));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;filter:drop-shadow(0 0 18px rgba(0,212,255,.5));animation:tglw 3s ease-in-out infinite}
+@keyframes tglw{0%,100%{filter:drop-shadow(0 0 12px rgba(0,212,255,.4))}50%{filter:drop-shadow(0 0 32px rgba(0,212,255,.9)) drop-shadow(0 0 55px rgba(0,102,255,.4))}}
+.glitch{position:relative;display:inline-block}
+.glitch::before,.glitch::after{content:attr(data-text);position:absolute;top:0;left:0;width:100%;height:100%;background:linear-gradient(135deg,var(--nc),var(--el));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.glitch::before{animation:g1 5s infinite;clip-path:polygon(0 20%,100% 20%,100% 40%,0 40%)}
+.glitch::after{animation:g2 5s infinite;clip-path:polygon(0 60%,100% 60%,100% 80%,0 80%)}
+@keyframes g1{0%,90%,100%{transform:translate(0);opacity:0}91%{transform:translate(-2px,1px);opacity:.7}93%{transform:translate(2px,-1px);opacity:0}}
+@keyframes g2{0%,88%,100%{transform:translate(0);opacity:0}89%{transform:translate(2px,-1px);opacity:.6}91%{transform:translate(-2px,1px);opacity:0}}
+.subrow{display:flex;align-items:center;justify-content:center;gap:14px;margin-top:8px}
+.sln{flex:1;height:1px;background:linear-gradient(90deg,transparent,var(--nb),transparent)}
+.sbt{font-family:'Share Tech Mono',monospace;font-size:12px;color:var(--nb);letter-spacing:4px;white-space:nowrap}
+.aring{display:flex;align-items:center;justify-content:center;margin:16px 0}
+.ring{width:86px;height:86px;border-radius:50%;border:2px solid var(--nc);display:flex;flex-direction:column;align-items:center;justify-content:center;position:relative;box-shadow:0 0 20px rgba(0,212,255,.4),inset 0 0 20px rgba(0,212,255,.05);animation:rglw 4s ease-in-out infinite}
+@keyframes rglw{0%,100%{box-shadow:0 0 20px rgba(0,212,255,.4)}50%{box-shadow:0 0 40px rgba(0,212,255,.8),0 0 80px rgba(0,102,255,.3)}}
+.ring::before{content:'';position:absolute;width:104px;height:104px;border-radius:50%;border:1px solid rgba(0,212,255,.2);animation:spin 6s linear infinite;border-top-color:var(--nc)}
+.ring::after{content:'';position:absolute;width:118px;height:118px;border-radius:50%;border:1px dashed rgba(0,102,255,.25);animation:spin 10s linear infinite reverse}
+@keyframes spin{to{transform:rotate(360deg)}}
+.rnum{font-family:'Orbitron',monospace;font-size:24px;font-weight:900;color:var(--nc);line-height:1;text-shadow:0 0 16px var(--nc)}
+.rlbl{font-family:'Share Tech Mono',monospace;font-size:9px;color:var(--nb);letter-spacing:1px;margin-top:2px}
+.pan{background:var(--pan);border:1px solid rgba(0,212,255,.2);border-radius:4px;padding:18px 20px;position:relative;overflow:hidden;margin-bottom:14px;backdrop-filter:blur(10px);transition:border-color .3s,box-shadow .3s;animation:fiu .6s ease backwards}
+.pan:hover{border-color:rgba(0,212,255,.6);box-shadow:0 0 20px rgba(0,212,255,.12),inset 0 0 20px rgba(0,212,255,.03)}
+.pan::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,var(--nb),var(--nc),transparent);animation:stop 3s ease-in-out infinite}
+@keyframes stop{0%,100%{opacity:.4}50%{opacity:1}}
+.pan::after{content:'';position:absolute;top:-100%;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,rgba(0,212,255,.35),transparent);animation:sdn 5s ease-in-out infinite}
+@keyframes sdn{to{top:110%}}
+@keyframes fiu{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
+.pan:nth-child(1){animation-delay:.08s}.pan:nth-child(2){animation-delay:.16s}.pan:nth-child(3){animation-delay:.24s}.pan:nth-child(4){animation-delay:.32s}
+.cn{position:absolute;width:9px;height:9px}
+.ctl{top:0;left:0;border-top:2px solid var(--nc);border-left:2px solid var(--nc)}
+.ctr{top:0;right:0;border-top:2px solid var(--nc);border-right:2px solid var(--nc)}
+.cbl{bottom:0;left:0;border-bottom:2px solid var(--nc);border-left:2px solid var(--nc)}
+.cbr{bottom:0;right:0;border-bottom:2px solid var(--nc);border-right:2px solid var(--nc)}
+.phdr{display:flex;align-items:center;gap:10px;margin-bottom:12px;padding-bottom:10px;border-bottom:1px solid rgba(0,212,255,.12)}
+.pdot{width:8px;height:8px;border-radius:50%;background:var(--nc);box-shadow:0 0 8px var(--nc);animation:blk 1.5s ease-in-out infinite}
+.pdot.g{background:var(--ng);box-shadow:0 0 8px var(--ng)}.pdot.b{background:#4488ff;box-shadow:0 0 8px #4488ff}
+@keyframes blk{0%,100%{opacity:1}50%{opacity:.3}}
+.pid{font-family:'Share Tech Mono',monospace;font-size:10px;color:var(--nc);letter-spacing:2px;text-transform:uppercase}
+.itxt{font-size:15px;line-height:1.7;color:rgba(200,232,255,.85);text-align:center}
+.hl{color:var(--nc);font-weight:700;text-shadow:0 0 10px rgba(0,212,255,.4)}
+.sname{font-family:'Orbitron',monospace;font-size:12px;color:var(--nb);letter-spacing:1px;display:block;margin:5px 0}
+.firm{font-family:'Share Tech Mono',monospace;font-size:11px;color:rgba(0,212,255,.5)}
+.cstrip{font-family:'Share Tech Mono',monospace;font-size:10px;color:rgba(0,255,136,.22);padding:9px 0;border-top:1px solid rgba(0,212,255,.07);border-bottom:1px solid rgba(0,212,255,.07);overflow:hidden;margin-bottom:14px;white-space:nowrap}
+.cinn{display:inline-block;animation:cscr 22s linear infinite;white-space:nowrap}
+@keyframes cscr{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.dgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px;margin-bottom:14px}
+.dcard{background:rgba(0,8,25,.9);border:1px solid rgba(0,212,255,.14);border-radius:4px;overflow:hidden;transition:transform .3s,box-shadow .3s;position:relative}
+.dcard:hover{transform:translateY(-3px);box-shadow:0 8px 28px rgba(0,212,255,.18)}
+.dhdr{background:linear-gradient(135deg,rgba(0,102,255,.28),rgba(0,212,255,.08));padding:10px 14px;display:flex;align-items:center;gap:10px;border-bottom:1px solid rgba(0,212,255,.18)}
+.dnum{font-family:'Orbitron',monospace;font-size:26px;font-weight:900;color:var(--nc);text-shadow:0 0 14px var(--nc);line-height:1}
+.dname{font-family:'Orbitron',monospace;font-size:11px;font-weight:700;color:var(--nb);letter-spacing:1px}
+.dlbl{font-family:'Share Tech Mono',monospace;font-size:9px;color:rgba(0,212,255,.45);letter-spacing:2px}
+.dbody{padding:12px}
+.tb{display:flex;gap:8px;margin-bottom:9px;align-items:flex-start}
+.tt{font-family:'Share Tech Mono',monospace;font-size:9px;color:var(--ng);background:rgba(0,255,136,.07);border:1px solid rgba(0,255,136,.18);padding:2px 5px;border-radius:2px;white-space:nowrap;min-width:68px;text-align:center;margin-top:2px}
+.tt.sport{color:#ff9900;background:rgba(255,153,0,.07);border-color:rgba(255,153,0,.25)}
+.tt.break{color:rgba(200,232,255,.4);background:rgba(200,232,255,.04);border-color:rgba(200,232,255,.12)}
+.tti{font-size:12px;font-weight:600;color:var(--tx);line-height:1.3;margin-bottom:2px}
+.tsp{font-family:'Share Tech Mono',monospace;font-size:10px;color:rgba(0,212,255,.55)}
+.ssep{display:flex;align-items:center;gap:8px;margin:9px 0}
+.sln2{flex:1;height:1px;background:rgba(0,212,255,.09)}
+.slb{font-family:'Share Tech Mono',monospace;font-size:9px;color:rgba(0,212,255,.35);letter-spacing:2px}
+.srow{display:flex;flex-wrap:wrap;gap:9px;justify-content:center;margin-bottom:14px}
+.schip{background:rgba(0,102,255,.09);border:1px solid rgba(0,102,255,.28);border-radius:3px;padding:8px 11px;text-align:center;transition:all .3s;position:relative;overflow:hidden}
+.schip:hover{border-color:var(--nc);background:rgba(0,212,255,.09);box-shadow:0 0 14px rgba(0,212,255,.18)}
+.schip::before{content:'';position:absolute;top:-100%;left:0;right:0;height:100%;background:linear-gradient(180deg,transparent,rgba(0,212,255,.05),transparent);animation:chs 3s ease-in-out infinite}
+@keyframes chs{0%{top:-100%}100%{top:200%}}
+.sn{font-family:'Orbitron',monospace;font-size:9px;font-weight:700;color:var(--nb);letter-spacing:1px;text-transform:uppercase}
+.st{font-size:10px;color:rgba(200,232,255,.55);margin-top:3px;max-width:155px;line-height:1.3}
+.foot{text-align:center;padding:18px;position:relative}
+.foot::before{content:'';position:absolute;top:0;left:50%;transform:translateX(-50%);width:180px;height:1px;background:linear-gradient(90deg,transparent,var(--nc),transparent)}
+.forg{font-family:'Orbitron',monospace;font-size:11px;font-weight:700;color:var(--nb);letter-spacing:2px;margin-bottom:5px}
+.fsub{font-family:'Share Tech Mono',monospace;font-size:10px;color:rgba(0,212,255,.38);letter-spacing:2px}
+.fcrd{font-family:'Share Tech Mono',monospace;font-size:9px;color:rgba(0,212,255,.22);margin-top:9px;letter-spacing:1px}
+.circ{position:fixed;top:0;left:0;right:0;bottom:0;pointer-events:none;z-index:0;opacity:.035}
+::-webkit-scrollbar{width:4px}::-webkit-scrollbar-track{background:var(--dk2)}::-webkit-scrollbar-thumb{background:rgba(0,212,255,.3);border-radius:2px}
+</style>
+
+<canvas id="bgc"></canvas>
+
+<svg class="circ" viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+  <path d="M0,100 L200,100 L200,200 L400,200 L400,100 L700,100" stroke="#00d4ff" stroke-width="1" fill="none"/>
+  <path d="M700,300 L900,300 L900,150 L1100,150 L1100,350 L1200,350" stroke="#00d4ff" stroke-width="1" fill="none"/>
+  <path d="M80,420 L80,620 L280,620 L280,520 L500,520" stroke="#00d4ff" stroke-width="1" fill="none"/>
+  <path d="M750,500 L950,500 L950,700 L1150,700 L1150,500" stroke="#00d4ff" stroke-width="1" fill="none"/>
+  <circle cx="200" cy="100" r="4" fill="#00d4ff"/><circle cx="400" cy="200" r="4" fill="#00d4ff"/>
+  <circle cx="900" cy="300" r="4" fill="#00d4ff"/><circle cx="80" cy="620" r="4" fill="#00d4ff"/>
+  <rect x="196" y="96" width="8" height="8" fill="none" stroke="#00d4ff" stroke-width="1"/>
+  <rect x="896" y="296" width="8" height="8" fill="none" stroke="#00d4ff" stroke-width="1"/>
+</svg>
+
+<div class="wrap">
+
+  <div class="hdr">
+    <div class="badge">// SISTEMA_ANIVERSARIO_v34.0 :: INITIALIZED</div>
+    <h1 class="mtit">
+      <span class="glitch" data-text="INGENIERÍA">INGENIERÍA</span><br>
+      <span class="glitch" data-text="DE SISTEMAS">DE SISTEMAS</span><br>
+      <span style="font-size:.6em;letter-spacing:4px">&amp; COMPUTACIÓN</span>
+    </h1>
+    <div class="subrow">
+      <div class="sln"></div>
+      <span class="sbt">UNDAC · PASCO · PERÚ</span>
+      <div class="sln"></div>
+    </div>
+    <div class="aring">
+      <div class="ring">
+        <div class="rnum">34</div>
+        <div class="rlbl">AÑOS</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="cstrip">
+    <div class="cinn">
+      &nbsp;&nbsp;#include &lt;anniversary.h&gt; :: void celebrar(){EFPIS.anios=34;} :: git commit -m "34 años de excelencia" :: SELECT * FROM logros WHERE año&lt;=2026; :: System.out.println("¡Feliz Aniversario!"); :: console.log("EFPIS_2026"); :: printf("34 años de historia\n"); :: import legacy from 'undac'; :: #include &lt;anniversary.h&gt; :: void celebrar(){EFPIS.anios=34;}&nbsp;&nbsp;
+    </div>
+  </div>
+
+  <!-- INVITACIÓN -->
+  <div class="pan">
+    <div class="cn ctl"></div><div class="cn ctr"></div><div class="cn cbl"></div><div class="cn cbr"></div>
+    <div class="phdr">
+      <div class="pdot"></div>
+      <span class="pid">// INVITACIÓN_OFICIAL.exe :: ID:2026-EFP-034 :: STATUS:ACTIVE</span>
+    </div>
+    <p class="itxt">
+      El Director, personal docente, administrativo y estudiantes de la<br>
+      <span class="sname">PROMOCIÓN 2026 — EFPIS y C</span>
+      de la <span class="hl">Universidad Nacional Daniel Alcides Carrión</span><br>
+      tienen el honor de invitarle a la celebración del<br>
+      <span class="hl" style="font-family:'Orbitron',monospace;font-size:1.1em">34° ANIVERSARIO INSTITUCIONAL</span><br>
+      <span class="firm">// 20 — 22 MAYO 2026 :: ACTIVIDADES ACADÉMICAS · CULTURALES · DEPORTIVAS · PROTOCOLARES</span><br><br>
+      <em style="font-size:13px;color:rgba(200,232,255,.6);font-style:normal">Su presencia aportará gran valor a esta ocasión tan especial para nuestra comunidad académica.</em>
+    </p>
+  </div>
+
+  <!-- DÍAS -->
+  <div class="dgrid">
+
+    <!-- MIÉRCOLES 20 -->
+    <div class="dcard">
+      <div class="dhdr">
+        <div class="dnum">20</div>
+        <div>
+          <div class="dname">MIÉRCOLES</div>
+          <div class="dlbl">// DAY_01 :: MAYO_2026</div>
+        </div>
+      </div>
+      <div class="dbody">
+        <div class="ssep"><div class="sln2"></div><span class="slb">MAÑANA</span><div class="sln2"></div></div>
+        <div class="tb"><div class="tt">09:00–09:15</div><div><div class="tti">Recepción de Autoridades y Asistentes</div><div class="tsp">Estudiantes Promoción 2026</div></div></div>
+        <div class="tb"><div class="tt">09:15–09:30</div><div><div class="tti">Interpretación de Himnos</div><div class="tsp">Perú · Pasco · UNDAC</div></div></div>
+        <div class="tb"><div class="tt">09:30–09:45</div><div><div class="tti">Palabras de Bienvenida</div><div class="tsp">Dr. Teodoro Alvarado Rivera · Dir. EFPIS</div></div></div>
+        <div class="tb"><div class="tt">09:45–10:00</div><div><div class="tti">Palabras del Rector</div><div class="tsp">Dr. Ángel Claudio Núñez Meza</div></div></div>
+        <div class="tb"><div class="tt">10:00–10:15</div><div><div class="tti">Palabras del Decano</div><div class="tsp">Dr. Tito Marcial Arias Arzapalo</div></div></div>
+        <div class="tb"><div class="tt">10:15–11:15</div><div><div class="tti">1ª Ponencia: "Gestión pública por proceso"</div><div class="tsp">Dr. Ángel Claudio Núñez Meza · Rector</div></div></div>
+        <div class="tb"><div class="tt break">11:15–11:30</div><div><div class="tti" style="color:rgba(200,232,255,.5)">Break</div></div></div>
+        <div class="tb"><div class="tt">11:30–12:15</div><div><div class="tti">Continuación: "Gestión pública Moderna"</div><div class="tsp">Dr. Ángel Claudio Núñez Meza · Rector</div></div></div>
+        <div class="ssep"><div class="sln2"></div><span class="slb">TARDE</span><div class="sln2"></div></div>
+        <div class="tb"><div class="tt">14:30–15:00</div><div><div class="tti">Elección Miss &amp; Mister SISTEMAS-UNDAC 2026</div><div class="tsp">Auditorio EFPIS y C</div></div></div>
+        <div class="tb"><div class="tt">15:00–18:45</div><div><div class="tti">Sport Elegante · Traje Típico · Gala · Coronación</div><div class="tsp">Miss &amp; Mister SISTEMAS 2026</div></div></div>
+      </div>
+    </div>
+
+    <!-- JUEVES 21 -->
+    <div class="dcard">
+      <div class="dhdr">
+        <div class="dnum">21</div>
+        <div>
+          <div class="dname">JUEVES</div>
+          <div class="dlbl">// DAY_02 :: MAYO_2026</div>
+        </div>
+      </div>
+      <div class="dbody">
+        <div class="ssep"><div class="sln2"></div><span class="slb">MAÑANA</span><div class="sln2"></div></div>
+        <div class="tb"><div class="tt">08:45–09:00</div><div><div class="tti">Recepción de Estudiantes y Docentes</div></div></div>
+        <div class="tb"><div class="tt">09:00–09:45</div><div><div class="tti">2ª Ponencia: Ciberseguridad en Huánuco frente al crecimiento digital</div><div class="tsp">Dr. Alexander Pasquel Cajas</div></div></div>
+        <div class="tb"><div class="tt">10:00–10:45</div><div><div class="tti">3ª Ponencia: Procrastinación académica y gestión del tiempo</div><div class="tsp">Lic. John Falcón Zavala</div></div></div>
+        <div class="tb"><div class="tt break">10:45–11:00</div><div><div class="tti" style="color:rgba(200,232,255,.5)">Break</div></div></div>
+        <div class="tb"><div class="tt">11:00–11:45</div><div><div class="tti">4ª Ponencia: IA Generativa en revisiones sistemáticas</div><div class="tsp">Dr. Javier Arturo Gamboa Cruzado</div></div></div>
+        <div class="tb"><div class="tt">11:45–12:30</div><div><div class="tti">5ª Ponencia: Movilidad Estudiantil en la UNDAC</div><div class="tsp">Mg. José Nieto Daza</div></div></div>
+        <div class="ssep"><div class="sln2"></div><span class="slb" style="color:rgba(255,153,0,.5)">TARDE · DEPORTES</span><div class="sln2"></div></div>
+        <div class="tb"><div class="tt sport">14:15–14:30</div><div><div class="tti">Gran Campeonato Deportivo Intersemestres</div><div class="tsp">Grass Artificial — UNDAC</div></div></div>
+        <div class="tb"><div class="tt sport">14:30–17:00</div><div><div class="tti">Voley Mixto</div></div></div>
+        <div class="tb"><div class="tt sport">17:00 →</div><div><div class="tti">Fútbol</div></div></div>
+      </div>
+    </div>
+
+    <!-- VIERNES 22 -->
+    <div class="dcard">
+      <div class="dhdr">
+        <div class="dnum">22</div>
+        <div>
+          <div class="dname">VIERNES</div>
+          <div class="dlbl">// DAY_03 :: ANIVERSARIO</div>
+        </div>
+      </div>
+      <div class="dbody">
+        <div class="ssep"><div class="sln2"></div><span class="slb">MAÑANA</span><div class="sln2"></div></div>
+        <div class="tb"><div class="tt">06:00</div><div><div class="tti">Salva de 21 Camaretazos</div><div class="tsp">34 años de vida institucional</div></div></div>
+        <div class="tb"><div class="tt">08:30–08:45</div><div><div class="tti">Recepción de Autoridades, Docentes y Personal Administrativo</div></div></div>
+        <div class="tb"><div class="tt">09:00–09:15</div><div><div class="tti">Palabras de Bienvenida</div><div class="tsp">Dr. Teodoro Alvarado Rivera · Dir. EFPIS</div></div></div>
+        <div class="tb"><div class="tt">09:15–09:30</div><div><div class="tti">Saludos de Autoridades UNDAC</div><div class="tsp">Rector · Vicerrector · Decano · Asesor</div></div></div>
+        <div class="tb"><div class="tt">09:30–09:45</div><div><div class="tti">Interpretación de Himnos</div><div class="tsp">Nacional · Pasco · UNDAC</div></div></div>
+        <div class="tb"><div class="tt">11:00–12:15</div><div><div class="tti">Misa por Aniversario EFPIS y C</div><div class="tsp">Dr. Ángel Claudio Núñez Meza · Rector</div></div></div>
+        <div class="tb"><div class="tt">12:15–12:30</div><div><div class="tti">Brindis de Honor</div><div class="tsp">Dr. Teodoro Alvarado Rivera</div></div></div>
+        <div class="tb"><div class="tt">12:30–12:45</div><div><div class="tti">Almuerzo de Confraternidad</div></div></div>
+        <div class="tb"><div class="tt">12:45–13:00</div><div><div class="tti">Palabras del Presidente de la Junta Directiva</div><div class="tsp">Abraham Pastor Fuero · Promoción 2026</div></div></div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- SPEAKERS -->
+  <div class="pan">
+    <div class="cn ctl"></div><div class="cn ctr"></div><div class="cn cbl"></div><div class="cn cbr"></div>
+    <div class="phdr">
+      <div class="pdot g"></div>
+      <span class="pid">// SPEAKERS_DATABASE.json :: 5 REGISTROS :: STATUS:CONFIRMED</span>
+    </div>
+    <div class="srow">
+      <div class="schip"><div class="sn">Núñez Meza</div><div class="st">Gestión pública por proceso &amp; Gestión pública moderna</div></div>
+      <div class="schip"><div class="sn">Pasquel Cajas</div><div class="st">Ciberseguridad en Huánuco frente al crecimiento digital</div></div>
+      <div class="schip"><div class="sn">Gamboa Cruzado</div><div class="st">IA generativa en revisiones sistemáticas de literatura</div></div>
+      <div class="schip"><div class="sn">Falcón Zavala</div><div class="st">Procrastinación académica y gestión del tiempo</div></div>
+      <div class="schip"><div class="sn">Nieto Daza</div><div class="st">Movilidad estudiantil en la UNDAC</div></div>
+    </div>
+  </div>
+
+  <!-- AUTORIDADES -->
+  <div class="pan">
+    <div class="cn ctl"></div><div class="cn ctr"></div><div class="cn cbl"></div><div class="cn cbr"></div>
+    <div class="phdr">
+      <div class="pdot b"></div>
+      <span class="pid">// AUTORIDADES.cfg :: UNIVERSIDAD NACIONAL DANIEL ALCIDES CARRIÓN</span>
+    </div>
+    <div class="srow">
+      <div class="schip" style="border-color:rgba(0,212,255,.3)"><div class="sn" style="color:var(--nc)">Rector</div><div class="st">Dr. Ángel Claudio Núñez Meza</div></div>
+      <div class="schip" style="border-color:rgba(0,212,255,.3)"><div class="sn" style="color:var(--nc)">Vicerrector Académico</div><div class="st">Dr. Guillermo Gamarra Astúhuaman</div></div>
+      <div class="schip" style="border-color:rgba(0,212,255,.3)"><div class="sn" style="color:var(--nc)">Decano Ingeniería</div><div class="st">Dr. Tito Marcial Arias Arzapalo</div></div>
+      <div class="schip" style="border-color:rgba(0,212,255,.3)"><div class="sn" style="color:var(--nc)">Director EFPIS y C / Asesor 2026</div><div class="st">Dr. Teodoro Alvarado Rivera</div></div>
+    </div>
+  </div>
+
+  <div class="foot">
+    <div class="forg">EFPIS y C · UNDAC · PASCO</div>
+    <div class="fsub">// UNIVERSIDAD NACIONAL DANIEL ALCIDES CARRIÓN</div>
+    <div class="fcrd">LAT: -10.0667° · LON: -76.2333° · ALT: 4338 msnm · PASCO, PERÚ</div>
+    <div class="fcrd" style="margin-top:6px;color:rgba(0,255,136,.18)">© PROMOCIÓN 2026 · sistema_v34.0.build(2026) · All rights reserved</div>
+  </div>
+
+</div>
+
+<script>
+const canvas=document.getElementById('bgc');
+const ctx=canvas.getContext('2d');
+const particles=[];
+const N=90;
+function resize(){canvas.width=window.innerWidth;canvas.height=Math.max(document.body.scrollHeight,window.innerHeight)}
+resize();window.addEventListener('resize',resize);
+for(let i=0;i<N;i++){particles.push({x:Math.random()*window.innerWidth,y:Math.random()*3000,vx:(Math.random()-.5)*.28,vy:(Math.random()-.5)*.28,r:Math.random()*1.4+.3,alpha:Math.random()*.45+.1,col:Math.random()>.5?'0,212,255':'0,102,255',phase:Math.random()*Math.PI*2})}
+let t=0;
+function draw(){
+  resize();ctx.clearRect(0,0,canvas.width,canvas.height);
+  const g=ctx.createRadialGradient(canvas.width/2,0,0,canvas.width/2,canvas.height,canvas.height);
+  g.addColorStop(0,'#020c1b');g.addColorStop(1,'#010812');
+  ctx.fillStyle=g;ctx.fillRect(0,0,canvas.width,canvas.height);
+  ctx.strokeStyle='rgba(0,212,255,0.038)';ctx.lineWidth=1;
+  const gs=60;
+  for(let x=0;x<canvas.width;x+=gs){ctx.beginPath();ctx.moveTo(x,0);ctx.lineTo(x,canvas.height);ctx.stroke()}
+  for(let y=0;y<canvas.height;y+=gs){ctx.beginPath();ctx.moveTo(0,y);ctx.lineTo(canvas.width,y);ctx.stroke()}
+  particles.forEach(p=>{
+    const a=p.alpha*(0.5+0.5*Math.sin(t*0.001+p.phase));
+    ctx.beginPath();ctx.arc(p.x,p.y,p.r,0,Math.PI*2);ctx.fillStyle=`rgba(${p.col},${a})`;ctx.fill();
+    particles.forEach(p2=>{
+      const d=Math.hypot(p.x-p2.x,p.y-p2.y);
+      if(d<95){ctx.beginPath();ctx.moveTo(p.x,p.y);ctx.lineTo(p2.x,p2.y);ctx.strokeStyle=`rgba(0,212,255,${0.025*(1-d/95)})`;ctx.lineWidth=.5;ctx.stroke()}
+    });
+    p.x+=p.vx;p.y+=p.vy;
+    if(p.x<0||p.x>canvas.width)p.vx*=-1;
+    if(p.y<0||p.y>canvas.height)p.vy*=-1;
+  });
+  t++;requestAnimationFrame(draw);
+}
+draw();
+</script>

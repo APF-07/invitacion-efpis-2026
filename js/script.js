@@ -61,7 +61,7 @@ function submitForm(e) {
     const semestre = document.getElementById('semestre').value;
 
     // Aquí está la URL que acabas de generar
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbwyXBtCIWMjOybAFEn4ZeWNbKIEQDi_C4wpn6MlgzlyGTyhUb_aCLlpjMiYTX-d_8df/exec';
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbzGmay5RKHzyWx1Q7Zj1CtSy8BKySLoBuZ5Fo8PFGQprWRNFot9wmVQa1EtF6aM1YXi/exec';
 
     // Se cambia el texto del botón para mostrar que está cargando
     const btnSubmit = document.querySelector('.btn-cta[type="submit"]');

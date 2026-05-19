@@ -59,13 +59,43 @@ const canvas = document.getElementById('bgc');
         const codigo = document.getElementById('codigo').value;
         const semestre = document.getElementById('semestre').value;
 
-        // AQUI AGREGAR EL ENLACE DEL GOOGLE SHEETS
-        // Ejemplo de uso con fetch():
-        // fetch('URL_DE_TU_GOOGLE_APP_SCRIPT', {
-        //     method: 'POST',
-        //     body: JSON.stringify({ nombre, codigo, semestre })
-        // })
+function submitForm(e) {
+    e.preventDefault();
+    
+    const nombre = document.getElementById('nombre').value;
+    const codigo = document.getElementById('codigo').value;
+    const semestre = document.getElementById('semestre').value;
 
+    // Aquí está la URL que acabas de generar
+    const scriptURL = 'https://script.google.com/a/macros/undac.edu.pe/s/AKfycbwH3-dhB8QcDb8yGA85kZEXu-DNOcaxU-vvuYISJV3MgCjamTwtS_5DxG2HKFd8W81Q/exec';
+
+    // Se cambia el texto del botón para mostrar que está cargando
+    const btnSubmit = document.querySelector('.btn-cta[type="submit"]');
+    const textoOriginal = btnSubmit.innerHTML;
+    btnSubmit.innerHTML = 'GUARDANDO...';
+    btnSubmit.disabled = true;
+
+    fetch(scriptURL, {
+        method: 'POST',
+        headers: { 'Content-Type': 'text/plain' },
+        body: JSON.stringify({ nombre, codigo, semestre })
+    })
+    .then(response => response.json())
+    .then(data => {
+        alert(`¡Asistencia guardada con éxito!\nNombre: ${nombre}\nCódigo: ${codigo}\nSemestre: ${semestre}`);
+        document.getElementById('regForm').reset();
+        closeModal();
+    })
+    .catch(error => {
+        console.error('Error!', error.message);
+        alert('Hubo un error al guardar la asistencia. Intenta nuevamente.');
+    })
+    .finally(() => {
+        // Restaurar el botón a la normalidad
+        btnSubmit.innerHTML = textoOriginal;
+        btnSubmit.disabled = false;
+    });
+}
         alert(`¡Asistencia guardada!\nNombre: ${nombre}\nCódigo: ${codigo}\nSemestre: ${semestre}`);
         
         document.getElementById('regForm').reset();

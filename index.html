@@ -5,471 +5,273 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>34° Aniversario - Ingeniería de Sistemas UNDAC</title>
     <meta name="description" content="Invitación Oficial al 34° Aniversario Institucional de la Escuela de Formación Profesional de Ingeniería de Sistemas y Computación - UNDAC">
-    <meta property="og:title" content="34° Aniversario Sistemas UNDAC">
-    <meta property="og:description" content="Promoción 2026 - Universidad Nacional Daniel Alcides Carrión">
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
 
 <canvas id="bgc"></canvas>
 
-<svg class="circ" viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
-    <path d="M0,100 L200,100 L200,200 L400,200 L400,100 L700,100" stroke="#00d4ff" stroke-width="1" fill="none" />
-    <path d="M700,300 L900,300 L900,150 L1100,150 L1100,350 L1200,350" stroke="#00d4ff" stroke-width="1" fill="none" />
-    <path d="M80,420 L80,620 L280,620 L280,520 L500,520" stroke="#00d4ff" stroke-width="1" fill="none" />
-    <path d="M750,500 L950,500 L950,700 L1150,700 L1150,500" stroke="#00d4ff" stroke-width="1" fill="none" />
-    <circle cx="200" cy="100" r="4" fill="#00d4ff" />
-    <circle cx="400" cy="200" r="4" fill="#00d4ff" />
-    <circle cx="900" cy="300" r="4" fill="#00d4ff" />
-    <circle cx="80" cy="620" r="4" fill="#00d4ff" />
-    <rect x="196" y="96" width="8" height="8" fill="none" stroke="#00d4ff" stroke-width="1" />
-    <rect x="896" y="296" width="8" height="8" fill="none" stroke="#00d4ff" stroke-width="1" />
-</svg>
+<div class="wrap libro-3d">
 
-<div class="wrap">
+    <div class="book-page active-page" id="page-1">
+        <div class="cn ctl"></div><div class="cn ctr"></div><div class="cn cbl"></div><div class="cn cbr"></div>
+        <div class="hdr">
+            <div class="logos-top">
+                <img src="img/logo_undac.png" alt="UNDAC" class="logo-inst">
+                <img src="img/LogoSistemas.png" alt="Sistemas" class="logo-inst">
+            </div>
+            
+            <div class="cover-box">
+                <div class="badge">SISTEMAS Y COMPUTACIÓN</div>
+                <div class="cover-34">
+                    <span class="c-num">34</span>
+                    <span class="c-txt">AÑOS</span>
+                </div>
+                <h2 class="cover-feliz">Feliz aniversario</h2>
+                <h1 class="cover-sistemas">Sistemas y Computación</h1>
+                <h3 class="cover-prog">¡Programación!</h3>
+                <div class="cover-footer">
+                    <span class="cf-line"></span> Promoción 2026 <span class="cf-line"></span>
+                </div>
+            </div>
+            
+            <div style="margin-top: 15px;">
+                <button class="btn-cta" style="width: 100%;" onclick="turnPage(1, 2)">ABRIR INVITACIÓN ►</button>
+            </div>
+        </div>
+    </div>
 
-    <div class="hdr">
-        <div class="logos-top">
-            <img src="img/logo_undac.png" alt="UNDAC" class="logo-inst">
-            <img src="img/LogoSistemas.png" alt="Sistemas" class="logo-inst">
+    <div class="book-page" id="page-2">
+        <div class="cn ctl"></div><div class="cn ctr"></div><div class="cn cbl"></div><div class="cn cbr"></div>
+        <div class="page-content">
+            <div class="phdr">
+                <div class="pdot"></div><span class="pid">INVITACIÓN OFICIAL</span>
+            </div>
+            <p class="itxt" style="margin-top: 30px;">
+                El Director, personal docente, administrativo y estudiantes de la<br>
+                <span class="sname">PROMOCIÓN 2026 — EFPIS y C</span>
+                de la <span class="hl">Universidad Nacional Daniel Alcides Carrión</span><br>
+                tienen el honor de invitarle a la celebración del<br><br>
+                <span class="hl" style="font-family:'Orbitron',monospace;font-size:1.3em; display:block; margin: 15px 0;">34° ANIVERSARIO<br>INSTITUCIONAL</span>
+                <span class="firm" style="font-size:12px; color:var(--nb)">20 — 22 MAYO 2026</span>
+                <span class="firm">ACTIVIDADES ACADÉMICAS · CULTURALES · DEPORTIVAS · PROTOCOLARES</span><br><br>
+                <em style="font-size:13px;color:rgba(200,232,255,.6);font-style:normal; display:block; margin-top:20px;">Su presencia aportará gran valor a esta ocasión tan especial para nuestra comunidad académica.</em>
+            </p>
         </div>
         
-        <div class="cover-box">
-            <div class="badge">SISTEMAS Y COMPUTACIÓN</div>
-            <div class="cover-34">
-                <span class="c-num">34</span>
-                <span class="c-txt">AÑOS</span>
+        <div class="nav-buttons">
+            <button class="tab-btn" onclick="turnPage(2, 1)">◄ Portada</button>
+            <button class="tab-btn active" onclick="turnPage(2, 3)">Ver Programa ►</button>
+        </div>
+    </div>
+
+    <div class="book-page" id="page-3">
+        <div class="cn ctl"></div><div class="cn ctr"></div><div class="cn cbl"></div><div class="cn cbr"></div>
+        <div class="page-content">
+            <div class="phdr">
+                <div class="pdot g"></div><span class="pid">CRONOGRAMA DE ACTIVIDADES</span>
             </div>
             
-            <h2 class="cover-feliz">Feliz aniversario</h2>
-            <h1 class="cover-sistemas">Sistemas y Computación</h1>
-            <h3 class="cover-prog">¡Programación!</h3>
+            <div class="page-title-box">
+                <div class="page-dnum">20</div>
+                <div>
+                    <div class="page-name">MIÉRCOLES</div>
+                    <div class="page-dlbl">20 DE MAYO, 2026</div>
+                </div>
+            </div>
+
+            <div class="ssep"><div class="sln2"></div><span class="slb">MAÑANA</span><div class="sln2"></div></div>
+            <div class="tb"><div class="tt">09:00–09:15</div><div><div class="tti">Recepción de Autoridades y Asistentes</div><div class="tsp">Estudiantes Promoción 2026</div></div></div>
+            <div class="tb"><div class="tt">09:15–09:30</div><div><div class="tti">Interpretación de Himnos</div><div class="tsp">Perú · Pasco · UNDAC</div></div></div>
+            <div class="tb"><div class="tt">09:30–09:45</div><div><div class="tti">Palabras de Bienvenida</div><div class="tsp">Dr. Teodoro Alvarado Rivera · Dir. EFPIS</div></div></div>
+            <div class="tb"><div class="tt">09:45–10:00</div><div><div class="tti">Palabras del Rector</div><div class="tsp">Dr. Ángel Claudio Núñez Meza</div></div></div>
+            <div class="tb"><div class="tt">10:00–10:15</div><div><div class="tti">Palabras del Decano</div><div class="tsp">Dr. Tito Marcial Arias Arzapalo</div></div></div>
+            <div class="tb"><div class="tt">10:15–11:15</div><div><div class="tti">1ª Ponencia: "Gestión pública por proceso"</div><div class="tsp">Dr. Ángel Claudio Núñez Meza · Rector</div></div></div>
+            <div class="tb"><div class="tt break">11:15–11:30</div><div><div class="tti" style="color:rgba(200,232,255,.5)">Break</div></div></div>
+            <div class="tb"><div class="tt">11:30–12:15</div><div><div class="tti">Continuación: "Gestión pública Moderna"</div><div class="tsp">Dr. Ángel Claudio Núñez Meza · Rector</div></div></div>
             
-            <div class="cover-footer">
-                <span class="cf-line"></span> Promoción 2026 <span class="cf-line"></span>
+            <div class="ssep"><div class="sln2"></div><span class="slb">TARDE</span><div class="sln2"></div></div>
+            <div class="tb"><div class="tt">14:30–15:00</div><div><div class="tti">Elección Miss &amp; Mister SISTEMAS-UNDAC 2026</div><div class="tsp">Auditorio EFPIS y C</div></div></div>
+            <div class="tb"><div class="tt">15:00–18:45</div><div><div class="tti">Sport Elegante · Traje Típico · Gala · Coronación</div><div class="tsp">Miss &amp; Mister SISTEMAS 2026</div></div></div>
+        </div>
+        
+        <div class="nav-buttons">
+            <button class="tab-btn" onclick="turnPage(3, 2)">◄ Atrás</button>
+            <button class="tab-btn active" onclick="turnPage(3, 4)">Día 21 ►</button>
+        </div>
+    </div>
+
+    <div class="book-page" id="page-4">
+        <div class="cn ctl"></div><div class="cn ctr"></div><div class="cn cbl"></div><div class="cn cbr"></div>
+        <div class="page-content">
+            <div class="phdr">
+                <div class="pdot g"></div><span class="pid">CRONOGRAMA DE ACTIVIDADES</span>
             </div>
-        </div>
-    </div>
-
-
-
-    <!-- INVITACIÓN -->
-    <div class="pan">
-        <div class="cn ctl"></div>
-        <div class="cn ctr"></div>
-        <div class="cn cbl"></div>
-        <div class="cn cbr"></div>
-        <div class="phdr">
-            <div class="pdot"></div>
-            <span class="pid">INVITACIÓN OFICIAL</span>
-        </div>
-        <p class="itxt">
-            El Director, personal docente, administrativo y estudiantes de la<br>
-            <span class="sname">PROMOCIÓN 2026 — EFPIS y C</span>
-            de la <span class="hl">Universidad Nacional Daniel Alcides Carrión</span><br>
-            tienen el honor de invitarle a la celebración del<br>
-            <span class="hl" style="font-family:'Orbitron',monospace;font-size:1.1em">34° ANIVERSARIO
-                INSTITUCIONAL</span><br>
-            <span class="firm">20 — 22 MAYO 2026 | ACTIVIDADES ACADÉMICAS · CULTURALES · DEPORTIVAS ·
-                PROTOCOLARES</span><br><br>
-            <em style="font-size:13px;color:rgba(200,232,255,.6);font-style:normal">Su presencia aportará gran valor a
-                esta ocasión tan especial para nuestra comunidad académica.</em>
-        </p>
-    </div>
-
-    <!-- DÍAS -->
-    <div class="tabs-nav">
-        <button class="tab-btn active" onclick="openTab(0, this)">Miércoles</button>
-        <button class="tab-btn" onclick="openTab(1, this)">Jueves</button>
-        <button class="tab-btn" onclick="openTab(2, this)">Viernes</button>
-    </div>
-
-    <div class="dgrid">
-
-        <!-- MIÉRCOLES 20 -->
-        <div class="dcard active-tab">
-            <div class="dhdr">
-                <div class="dnum">20</div>
+            
+            <div class="page-title-box">
+                <div class="page-dnum">21</div>
                 <div>
-                    <div class="dname">MIÉRCOLES</div>
-                    <div class="dlbl">20 DE MAYO, 2026</div>
+                    <div class="page-name">JUEVES</div>
+                    <div class="page-dlbl">21 DE MAYO, 2026</div>
                 </div>
             </div>
-            <div class="dbody">
-                <div class="ssep">
-                    <div class="sln2"></div><span class="slb">MAÑANA</span>
-                    <div class="sln2"></div>
-                </div>
-                <div class="tb">
-                    <div class="tt">09:00–09:15</div>
-                    <div>
-                        <div class="tti">Recepción de Autoridades y Asistentes</div>
-                        <div class="tsp">Estudiantes Promoción 2026</div>
-                    </div>
-                </div>
-                <div class="tb">
-                    <div class="tt">09:15–09:30</div>
-                    <div>
-                        <div class="tti">Interpretación de Himnos</div>
-                        <div class="tsp">Perú · Pasco · UNDAC</div>
-                    </div>
-                </div>
-                <div class="tb">
-                    <div class="tt">09:30–09:45</div>
-                    <div>
-                        <div class="tti">Palabras de Bienvenida</div>
-                        <div class="tsp">Dr. Teodoro Alvarado Rivera · Dir. EFPIS</div>
-                    </div>
-                </div>
-                <div class="tb">
-                    <div class="tt">09:45–10:00</div>
-                    <div>
-                        <div class="tti">Palabras del Rector</div>
-                        <div class="tsp">Dr. Ángel Claudio Núñez Meza</div>
-                    </div>
-                </div>
-                <div class="tb">
-                    <div class="tt">10:00–10:15</div>
-                    <div>
-                        <div class="tti">Palabras del Decano</div>
-                        <div class="tsp">Dr. Tito Marcial Arias Arzapalo</div>
-                    </div>
-                </div>
-                <div class="tb">
-                    <div class="tt">10:15–11:15</div>
-                    <div>
-                        <div class="tti">1ª Ponencia: "Gestión pública por proceso"</div>
-                        <div class="tsp">Dr. Ángel Claudio Núñez Meza · Rector</div>
-                    </div>
-                </div>
-                <div class="tb">
-                    <div class="tt break">11:15–11:30</div>
-                    <div>
-                        <div class="tti" style="color:rgba(200,232,255,.5)">Break</div>
-                    </div>
-                </div>
-                <div class="tb">
-                    <div class="tt">11:30–12:15</div>
-                    <div>
-                        <div class="tti">Continuación: "Gestión pública Moderna"</div>
-                        <div class="tsp">Dr. Ángel Claudio Núñez Meza · Rector</div>
-                    </div>
-                </div>
-                <div class="ssep">
-                    <div class="sln2"></div><span class="slb">TARDE</span>
-                    <div class="sln2"></div>
-                </div>
-                <div class="tb">
-                    <div class="tt">14:30–15:00</div>
-                    <div>
-                        <div class="tti">Elección Miss &amp; Mister SISTEMAS-UNDAC 2026</div>
-                        <div class="tsp">Auditorio EFPIS y C</div>
-                    </div>
-                </div>
-                <div class="tb">
-                    <div class="tt">15:00–18:45</div>
-                    <div>
-                        <div class="tti">Sport Elegante · Traje Típico · Gala · Coronación</div>
-                        <div class="tsp">Miss &amp; Mister SISTEMAS 2026</div>
-                    </div>
-                </div>
-            </div>
-        </div>
 
-        <!-- JUEVES 21 -->
-        <div class="dcard">
-            <div class="dhdr">
-                <div class="dnum">21</div>
+            <div class="ssep"><div class="sln2"></div><span class="slb">MAÑANA</span><div class="sln2"></div></div>
+            <div class="tb"><div class="tt">08:45–09:00</div><div><div class="tti">Recepción de Estudiantes y Docentes</div></div></div>
+            <div class="tb"><div class="tt">09:00–09:45</div><div><div class="tti">2ª Ponencia: Ciberseguridad en Huánuco frente al crecimiento digital</div><div class="tsp">Dr. Alexander Pasquel Cajas</div></div></div>
+            <div class="tb"><div class="tt">10:00–10:45</div><div><div class="tti">3ª Ponencia: Procrastinación académica y gestión del tiempo</div><div class="tsp">Lic. John Falcón Zavala</div></div></div>
+            <div class="tb"><div class="tt break">10:45–11:00</div><div><div class="tti" style="color:rgba(200,232,255,.5)">Break</div></div></div>
+            <div class="tb"><div class="tt">11:00–11:45</div><div><div class="tti">4ª Ponencia: IA Generativa en revisiones sistemáticas</div><div class="tsp">Dr. Javier Arturo Gamboa Cruzado</div></div></div>
+            <div class="tb"><div class="tt">11:45–12:30</div><div><div class="tti">5ª Ponencia: Movilidad Estudiantil en la UNDAC</div><div class="tsp">Mg. José Nieto Daza</div></div></div>
+            
+            <div class="ssep"><div class="sln2"></div><span class="slb" style="color:#ff9900">TARDE · DEPORTES</span><div class="sln2"></div></div>
+            <div class="tb"><div class="tt sport">14:15–14:30</div><div><div class="tti">Gran Campeonato Deportivo Intersemestres</div><div class="tsp">Grass Artificial — UNDAC</div></div></div>
+            <div class="tb"><div class="tt sport">14:30–17:00</div><div><div class="tti">Voley Mixto</div></div></div>
+            <div class="tb"><div class="tt sport">17:00 →</div><div><div class="tti">Fútbol</div></div></div>
+        </div>
+        
+        <div class="nav-buttons">
+            <button class="tab-btn" onclick="turnPage(4, 3)">◄ Día 20</button>
+            <button class="tab-btn active" onclick="turnPage(4, 5)">Día 22 ►</button>
+        </div>
+    </div>
+
+    <div class="book-page" id="page-5">
+        <div class="cn ctl"></div><div class="cn ctr"></div><div class="cn cbl"></div><div class="cn cbr"></div>
+        <div class="page-content">
+            <div class="phdr">
+                <div class="pdot b"></div><span class="pid">DÍA CENTRAL DE ANIVERSARIO</span>
+            </div>
+            
+            <div class="page-title-box">
+                <div class="page-dnum">22</div>
                 <div>
-                    <div class="dname">JUEVES</div>
-                    <div class="dlbl">21 DE MAYO, 2026</div>
+                    <div class="page-name">VIERNES</div>
+                    <div class="page-dlbl">22 DE MAYO, 2026</div>
                 </div>
             </div>
-            <div class="dbody">
-                <div class="ssep">
-                    <div class="sln2"></div><span class="slb">MAÑANA</span>
-                    <div class="sln2"></div>
+
+            <div class="ssep"><div class="sln2"></div><span class="slb">MAÑANA</span><div class="sln2"></div></div>
+            <div class="tb"><div class="tt">06:00</div><div><div class="tti">Salva de 21 Camaretazos</div><div class="tsp">34 años de vida institucional</div></div></div>
+            <div class="tb"><div class="tt">08:30–08:45</div><div><div class="tti">Recepción de Autoridades, Docentes y Personal Administrativo</div></div></div>
+            <div class="tb"><div class="tt">09:00–09:15</div><div><div class="tti">Palabras de Bienvenida</div><div class="tsp">Dr. Teodoro Alvarado Rivera · Dir. EFPIS</div></div></div>
+            <div class="tb"><div class="tt">09:15–09:30</div><div><div class="tti">Saludos de Autoridades UNDAC</div><div class="tsp">Rector · Vicerrector · Decano · Asesor</div></div></div>
+            <div class="tb"><div class="tt">09:30–09:45</div><div><div class="tti">Interpretación de Himnos</div><div class="tsp">Nacional · Pasco · UNDAC</div></div></div>
+            <div class="tb"><div class="tt">11:00–12:15</div><div><div class="tti">Misa por Aniversario EFPIS y C</div><div class="tsp">Mg. Elvis Jesus Paredes Lopez</div></div></div>
+            <div class="tb"><div class="tt">12:15–12:30</div><div><div class="tti">Brindis de Honor</div><div class="tsp">Dr. Teodoro Alvarado Rivera</div></div></div>
+            <div class="tb"><div class="tt">12:30–12:45</div><div><div class="tti">Almuerzo de Confraternidad</div></div></div>
+            <div class="tb"><div class="tt">12:45–13:00</div><div><div class="tti">Palabras del Presidente de la Junta Directiva</div><div class="tsp">Abraham Pastor Fuero · Promoción 2026</div></div></div>
+            
+            <div class="ssep"><div class="sln2"></div><span class="slb">TARDE DE DEPORTE</span><div class="sln2"></div></div>
+            <div class="tb"><div class="tt">14:15–14:30</div><div><div class="tti">Gran Campeonato Deportivo Intersemestres</div><div class="tsp">Grass Artificial UNDAC</div></div></div>
+            <div class="tb"><div class="tt">14:30–17:00</div><div><div class="tti">Voley Mixto</div></div></div>
+            <div class="tb"><div class="tt">17:00 →</div><div><div class="tti">Fútbol</div></div></div>
+        </div>
+        
+        <div class="nav-buttons">
+            <button class="tab-btn" onclick="turnPage(5, 4)">◄ Día 21</button>
+            <button class="tab-btn active" onclick="turnPage(5, 6)">Autoridades ►</button>
+        </div>
+    </div>
+
+    <div class="book-page" id="page-6">
+        <div class="cn ctl"></div><div class="cn ctr"></div><div class="cn cbl"></div><div class="cn cbr"></div>
+        <div class="page-content">
+            
+            <div class="phdr">
+                <div class="pdot g"></div><span class="pid">PONENTES INVITADOS</span>
+            </div>
+            <div class="srow">
+                <div class="schip">
+                    <div class="sn">Núñez Meza</div>
+                    <div class="st">Gestión pública por proceso &amp; Gestión pública moderna</div>
                 </div>
-                <div class="tb">
-                    <div class="tt">08:45–09:00</div>
-                    <div>
-                        <div class="tti">Recepción de Estudiantes y Docentes</div>
-                    </div>
+                <div class="schip">
+                    <div class="sn">Pasquel Cajas</div>
+                    <div class="st">Ciberseguridad en Huánuco frente al crecimiento digital</div>
                 </div>
-                <div class="tb">
-                    <div class="tt">09:00–09:45</div>
-                    <div>
-                        <div class="tti">2ª Ponencia: Ciberseguridad en Huánuco frente al crecimiento digital</div>
-                        <div class="tsp">Dr. Alexander Pasquel Cajas</div>
-                    </div>
+                <div class="schip">
+                    <div class="sn">Gamboa Cruzado</div>
+                    <div class="st">IA generativa en revisiones sistemáticas de literatura</div>
                 </div>
-                <div class="tb">
-                    <div class="tt">10:00–10:45</div>
-                    <div>
-                        <div class="tti">3ª Ponencia: Procrastinación académica y gestión del tiempo</div>
-                        <div class="tsp">Lic. John Falcón Zavala</div>
-                    </div>
+                <div class="schip">
+                    <div class="sn">Falcón Zavala</div>
+                    <div class="st">Procrastinación académica y gestión del tiempo</div>
                 </div>
-                <div class="tb">
-                    <div class="tt break">10:45–11:00</div>
-                    <div>
-                        <div class="tti" style="color:rgba(200,232,255,.5)">Break</div>
-                    </div>
-                </div>
-                <div class="tb">
-                    <div class="tt">11:00–11:45</div>
-                    <div>
-                        <div class="tti">4ª Ponencia: IA Generativa en revisiones sistemáticas</div>
-                        <div class="tsp">Dr. Javier Arturo Gamboa Cruzado</div>
-                    </div>
-                </div>
-                <div class="tb">
-                    <div class="tt">11:45–12:30</div>
-                    <div>
-                        <div class="tti">5ª Ponencia: Movilidad Estudiantil en la UNDAC</div>
-                        <div class="tsp">Mg. José Nieto Daza</div>
-                    </div>
-                </div>
-                <div class="ssep">
-                    <div class="sln2"></div><span class="slb" style="color:rgba(255,153,0,.5)">TARDE · DEPORTES</span>
-                    <div class="sln2"></div>
-                </div>
-                <div class="tb">
-                    <div class="tt sport">14:15–14:30</div>
-                    <div>
-                        <div class="tti">Gran Campeonato Deportivo Intersemestres</div>
-                        <div class="tsp">Grass Artificial — UNDAC</div>
-                    </div>
-                </div>
-                <div class="tb">
-                    <div class="tt sport">14:30–17:00</div>
-                    <div>
-                        <div class="tti">Voley Mixto</div>
-                    </div>
-                </div>
-                <div class="tb">
-                    <div class="tt sport">17:00 →</div>
-                    <div>
-                        <div class="tti">Fútbol</div>
-                    </div>
+                <div class="schip">
+                    <div class="sn">Nieto Daza</div>
+                    <div class="st">Movilidad estudiantil en la UNDAC</div>
                 </div>
             </div>
+
+            <div class="phdr" style="margin-top:25px;">
+                <div class="pdot b"></div><span class="pid">AUTORIDADES UNIVERSITARIAS</span>
+            </div>
+            <div class="srow">
+                <div class="schip" style="border-color:rgba(0,212,255,.3)">
+                    <div class="sn" style="color:var(--nc)">Rector</div>
+                    <div class="st">Dr. Ángel Claudio Núñez Meza</div>
+                </div>
+                <div class="schip" style="border-color:rgba(0,212,255,.3)">
+                    <div class="sn" style="color:var(--nc)">Vicerrector Académico</div>
+                    <div class="st">Dr. Guillermo Gamarra Astúhuaman</div>
+                </div>
+                <div class="schip" style="border-color:rgba(0,212,255,.3)">
+                    <div class="sn" style="color:var(--nc)">Decano Ingeniería</div>
+                    <div class="st">Dr. Tito Marcial Arias Arzapalo</div>
+                </div>
+                <div class="schip" style="border-color:rgba(0,212,255,.3)">
+                    <div class="sn" style="color:var(--nc)">Director EFPIS / Asesor 2026</div>
+                    <div class="st">Dr. Teodoro Alvarado Rivera</div>
+                </div>
+            </div>
+
+            <div class="cta-container" style="margin-top:35px;">
+                <button class="btn-cta" style="width: 100%;" onclick="openModal()">CONFIRMAR ASISTENCIA</button>
+            </div>
+            
+        </div>
+        
+        <div class="nav-buttons">
+            <button class="tab-btn" onclick="turnPage(6, 5)">◄ Día 22</button>
         </div>
 
-        <!-- VIERNES 22 -->
-        <div class="dcard">
-            <div class="dhdr">
-                <div class="dnum">22</div>
-                <div>
-                    <div class="dname">VIERNES</div>
-                    <div class="dlbl">22 DE MAYO, 2026</div>
-                </div>
-            </div>
-            <div class="dbody">
-                <div class="ssep">
-                    <div class="sln2"></div><span class="slb">MAÑANA</span>
-                    <div class="sln2"></div>
-                </div>
-                <div class="tb">
-                    <div class="tt">06:00</div>
-                    <div>
-                        <div class="tti">Salva de 21 Camaretazos</div>
-                        <div class="tsp">34 años de vida institucional</div>
-                    </div>
-                </div>
-                <div class="tb">
-                    <div class="tt">08:30–08:45</div>
-                    <div>
-                        <div class="tti">Recepción de Autoridades, Docentes y Personal Administrativo</div>
-                    </div>
-                </div>
-                <div class="tb">
-                    <div class="tt">09:00–09:15</div>
-                    <div>
-                        <div class="tti">Palabras de Bienvenida</div>
-                        <div class="tsp">Dr. Teodoro Alvarado Rivera · Dir. EFPIS</div>
-                    </div>
-                </div>
-                <div class="tb">
-                    <div class="tt">09:15–09:30</div>
-                    <div>
-                        <div class="tti">Saludos de Autoridades UNDAC</div>
-                        <div class="tsp">Rector · Vicerrector · Decano · Asesor</div>
-                    </div>
-                </div>
-                <div class="tb">
-                    <div class="tt">09:30–09:45</div>
-                    <div>
-                        <div class="tti">Interpretación de Himnos</div>
-                        <div class="tsp">Nacional · Pasco · UNDAC</div>
-                    </div>
-                </div>
-                <div class="tb">
-                    <div class="tt">11:00–12:15</div>
-                    <div>
-                        <div class="tti">Misa por Aniversario EFPIS y C</div>
-                        <div class="tsp">Mg. Elvis Jesus Paredes Lopez</div>
-                    </div>
-                </div>
-                <div class="tb">
-                    <div class="tt">12:15–12:30</div>
-                    <div>
-                        <div class="tti">Brindis de Honor</div>
-                        <div class="tsp">Dr. Teodoro Alvarado Rivera</div>
-                    </div>
-                </div>
-                <div class="tb">
-                    <div class="tt">12:30–12:45</div>
-                    <div>
-                        <div class="tti">Almuerzo de Confraternidad</div>
-                    </div>
-                </div>
-                <div class="tb">
-                    <div class="tt">12:45–13:00</div>
-                    <div>
-                        <div class="tti">Palabras del Presidente de la Junta Directiva</div>
-                        <div class="tsp">Abraham Pastor Fuero · Promoción 2026</div>
-                    </div>
-                </div>
-                <div class="ssep">
-                    <div class="sln2"></div><span class="slb">TARDE DE DEPORTE</span>
-                    <div class="sln2"></div>
-                </div>
-                <div class="tb">
-                    <div class="tt">14:15–14:30</div>
-                    <div class="tc">
-                        <div class="tti">Gran Campeonato Deportivo Intersemestres</div>
-                        <div class="tsp">Grass Artificial UNDAC</div>
-                    </div>
-                </div>
-                <div class="tb">
-                    <div class="tt">14:30–17:00</div>
-                    <div class="tc">
-                        <div class="tti">Voley Mixto</div>
-                    </div>
-                </div>
-                <div class="tb">
-                    <div class="tt">17:00 →</div>
-                    <div class="tc">
-                        <div class="tti">Fútbol</div>
-                    </div>
-                </div>
-            </div>
+        <div class="foot">
+            <div class="forg">EFPIS y C · UNDAC · PASCO</div>
+            <div class="fcrd">© PROMOCIÓN 2026 · Todos los derechos reservados</div>
         </div>
     </div>
 
 </div>
 
-<!-- SPEAKERS -->
-<div class="pan">
-    <div class="cn ctl"></div>
-    <div class="cn ctr"></div>
-    <div class="cn cbl"></div>
-    <div class="cn cbr"></div>
-    <div class="phdr">
-        <div class="pdot g"></div>
-        <span class="pid">PONENTES INVITADOS</span>
-    </div>
-    <div class="srow">
-        <div class="schip">
-            <div class="sn">Núñez Meza</div>
-            <div class="st">Gestión pública por proceso &amp; Gestión pública moderna</div>
-        </div>
-        <div class="schip">
-            <div class="sn">Pasquel Cajas</div>
-            <div class="st">Ciberseguridad en Huánuco frente al crecimiento digital</div>
-        </div>
-        <div class="schip">
-            <div class="sn">Gamboa Cruzado</div>
-            <div class="st">IA generativa en revisiones sistemáticas de literatura</div>
-        </div>
-        <div class="schip">
-            <div class="sn">Falcón Zavala</div>
-            <div class="st">Procrastinación académica y gestión del tiempo</div>
-        </div>
-        <div class="schip">
-            <div class="sn">Nieto Daza</div>
-            <div class="st">Movilidad estudiantil en la UNDAC</div>
-        </div>
-    </div>
-</div>
+<audio id="bgAudio" loop>
+    <source src="audio/fondo.mp3" type="audio/mpeg">
+</audio>
 
-<!-- AUTORIDADES -->
-<div class="pan">
-    <div class="cn ctl"></div>
-    <div class="cn ctr"></div>
-    <div class="cn cbl"></div>
-    <div class="cn cbr"></div>
-    <div class="phdr">
-        <div class="pdot b"></div>
-        <span class="pid">AUTORIDADES UNIVERSITARIAS</span>
-    </div>
-    <div class="srow">
-        <div class="schip" style="border-color:rgba(0,212,255,.3)">
-            <div class="sn" style="color:var(--nc)">Rector</div>
-            <div class="st">Dr. Ángel Claudio Núñez Meza</div>
-        </div>
-        <div class="schip" style="border-color:rgba(0,212,255,.3)">
-            <div class="sn" style="color:var(--nc)">Vicerrector Académico</div>
-            <div class="st">Dr. Guillermo Gamarra Astúhuaman</div>
-        </div>
-        <div class="schip" style="border-color:rgba(0,212,255,.3)">
-            <div class="sn" style="color:var(--nc)">Decano Ingeniería</div>
-            <div class="st">Dr. Tito Marcial Arias Arzapalo</div>
-        </div>
-        <div class="schip" style="border-color:rgba(0,212,255,.3)">
-            <div class="sn" style="color:var(--nc)">Director EFPIS y C / Asesor 2026</div>
-            <div class="st">Dr. Teodoro Alvarado Rivera</div>
-        </div>
-    </div>
-</div>
-
-<div class="cta-container">
-    <button class="btn-cta" onclick="openModal()">CONFIRMAR ASISTENCIA</button>
-</div>
-
-<!-- Modal de Confirmación -->
 <div id="regModal" class="modal-overlay">
-    <div class="modal-box pan">
-        <div class="cn ctl"></div>
-        <div class="cn ctr"></div>
-        <div class="cn cbl"></div>
-        <div class="cn cbr"></div>
-        
-        <div class="phdr" style="margin-bottom:20px">
+    <div class="modal-box">
+        <div class="cn ctl"></div><div class="cn ctr"></div><div class="cn cbl"></div><div class="cn cbr"></div>
+        <div class="phdr">
             <div class="pdot"></div>
             <span class="pid">REGISTRO DE ASISTENCIA</span>
             <button class="close-btn" onclick="closeModal()">×</button>
         </div>
-        
         <form id="regForm" onsubmit="submitForm(event)">
             <div class="input-group">
                 <label>Nombres Completos</label>
                 <input type="text" id="nombre" required placeholder="Ej. Juan Pérez">
             </div>
-            
             <div class="input-group">
                 <label>Código de Estudiante</label>
-                <input type="text" id="codigo" required pattern="[0-9]+" placeholder="Solo números" oninput="this.value = this.value.replace(/[^0-9]/g, '')">
+                <input type="text" id="codigo" required pattern="[0-9]+" placeholder="Solo números">
             </div>
-            
             <div class="input-group">
                 <label>Semestre</label>
-                <input type="text" id="semestre" required pattern="[0-9]+" placeholder="Ej. 6" maxlength="2" oninput="this.value = this.value.replace(/[^0-9]/g, '')">
+                <input type="text" id="semestre" required pattern="[0-9]+" placeholder="Ej. 6" maxlength="2">
             </div>
-            
-            <button type="submit" class="btn-cta" style="width: 100%; margin-top: 15px; font-size: 16px; padding: 10px;">GUARDAR</button>
+            <button type="submit" class="btn-cta" style="width: 100%; margin-top: 10px;">GUARDAR</button>
         </form>
     </div>
-</div>
-
-<div class="foot">
-    <div class="forg">EFPIS y C · UNDAC · PASCO</div>
-    <div class="fsub">UNIVERSIDAD NACIONAL DANIEL ALCIDES CARRIÓN</div>
-    <div class="fcrd">LAT: -10.0667° · LON: -76.2333° · ALT: 4338 msnm · PASCO, PERÚ</div>
-    <div class="fcrd" style="margin-top:6px;color:rgba(0,255,136,.18)">© PROMOCIÓN 2026 · Todos los derechos reservados</div>
-</div>
-
 </div>
 
 <script src="js/script.js"></script>
